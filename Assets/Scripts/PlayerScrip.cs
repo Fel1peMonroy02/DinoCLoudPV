@@ -13,6 +13,7 @@ public class PlayerScrip : MonoBehaviour
     private bool enSuelo;
     private Rigidbody2D rb;
     public Animator animator;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,18 +22,34 @@ public class PlayerScrip : MonoBehaviour
     private void Update()
     {
         //Horizontal
-        float velocidadX = Input.GetAxis("Horizontal")*Time.deltaTime*velocidad;
+        float velocidadX = Input.GetAxis("Horizontal") * Time.deltaTime * velocidad;
         //Vector 2
         Vector2 posicion = transform.position;
+
+        //Funcion del animator par pasar de idle a run
+        animator.SetFloat("Movimiento", velocidadX * velocidad);
+
+        //Para cambiar orientacion al correr
+        if (velocidadX < 0){
+            transform.localScale = new Vector2(-1, 1);
+        }
+        if(velocidadX > 0){
+            transform.localScale = new Vector2(1, 1);
+        }
+
         //Movimiento
         transform.position = new Vector2(velocidadX + posicion.x, posicion.y);
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, LongitudRaycast, capaSuelo);
         enSuelo = hit.collider != null;
+
+        
         //Sentencia si el pj esta en el suelo, si apreta la tecla espacio el pj salta
         if (enSuelo && Input.GetKeyDown(KeyCode.Space)) {
             rb.AddForce(new Vector2(0f, FuerzaSalto), ForceMode2D.Impulse);
         }
+
+        animator.SetBool("Ensuelo", enSuelo);
         
     }
 
@@ -44,6 +61,18 @@ public class PlayerScrip : MonoBehaviour
 
 
 
-    //private void
+    // Detectar colisión con el objeto "vacío"
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("CaidaMuerte"))
+        {
+            //vidas--;
+            //puedeMoverse = false;
+            Debug.Log("¡Caíste al vacío!" );
 
+            // (Opcional) podrías desactivar al personaje, reiniciar el nivel, mostrar Game Over, etc.
+            gameObject.SetActive(false);
+        }
+
+    }
 }
