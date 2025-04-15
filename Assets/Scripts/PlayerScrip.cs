@@ -2,21 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScrip : MonoBehaviour
 {
     //variables
     public float velocidad = 5f;
-    public float FuerzaSalto = 10f;
+    public float FuerzaSalto = 7f;
     public float LongitudRaycast = 0.1f;
     public LayerMask capaSuelo;
     private bool enSuelo;
     private Rigidbody2D rb;
     public Animator animator;
 
-    private void Start()
+    public AudioSource pasosAudio;
+    public AudioClip premioSound;
+    public AudioClip saltoSound;
+    public AudioClip muerteSound;
+
+    private AudioSource audioSource;
+
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -37,6 +46,17 @@ public class PlayerScrip : MonoBehaviour
             transform.localScale = new Vector2(1, 1);
         }
 
+        // Sonido de pasos
+        if (Input.GetAxis("Horizontal") != 0 && enSuelo)
+        {
+            if (!pasosAudio.isPlaying)
+                pasosAudio.Play();
+        }
+        else
+        {
+            pasosAudio.Stop();
+        }
+
         //Movimiento
         transform.position = new Vector2(velocidadX + posicion.x, posicion.y);
 
@@ -47,10 +67,13 @@ public class PlayerScrip : MonoBehaviour
         //Sentencia si el pj esta en el suelo, si apreta la tecla espacio el pj salta
         if (enSuelo && Input.GetKeyDown(KeyCode.Space)) {
             rb.AddForce(new Vector2(0f, FuerzaSalto), ForceMode2D.Impulse);
+            audioSource.PlayOneShot(saltoSound);
         }
 
         animator.SetBool("Ensuelo", enSuelo);
-        
+
+
+
     }
 
     private void OnDrawGizmos()
@@ -62,17 +85,24 @@ public class PlayerScrip : MonoBehaviour
 
 
     // Detectar colisión con el objeto "vacío"
+    [System.Obsolete]
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("CaidaMuerte"))
         {
-            //vidas--;
-            //puedeMoverse = false;
-            Debug.Log("¡Caíste al vacío!" );
 
-            // (Opcional) podrías desactivar al personaje, reiniciar el nivel, mostrar Game Over, etc.
-            gameObject.SetActive(false);
+            // Detener completamente el movimiento
+            rb.velocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Static; // Lo congela físicamente
+            
+
+            Debug.Log("¡Moriste!");
+            animator.SetTrigger("CaidaMuerte");
+            audioSource.PlayOneShot(muerteSound);
+
+            FindAnyObjectByType<GameOver>().MostrarGameOver();
+            this.enabled = false;//Para desactivar movimiento desde update.
+
         }
-
     }
 }

@@ -5,29 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    /*[SerializeField] string escenaInicial = null;
-    [SerializeField] string escenaInstrucciones = null;
-    [SerializeField] string escenaCreditos = null;*/
 
+    public GameObject PanelInstrucciones;
+
+    void Start()
+    {
+        PanelInstrucciones.SetActive(false);
+    }
     public void Iniciar()
     {
         SceneManager.LoadScene(1);
+
     }
 
-    /*public void Instrucciones()
+    public void Instrucciones()
     {
-        print("Botón Instrucciones");
-        SceneManager.LoadScene(escenaInstrucciones);
+        PanelInstrucciones.SetActive(true);
     }
 
-    public void Creditos()
-    {
-        print("Botón Crédito");
-        SceneManager.LoadScene(escenaCreditos);
-    }*/
-
+ 
     public void Salir()
     {
+        Debug.Log("Saliendo del juego...");
         Application.Quit();
     }
+
 }
