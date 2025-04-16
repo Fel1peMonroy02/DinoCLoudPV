@@ -6,47 +6,52 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScrip : MonoBehaviour
 {
-    //variables
-    public float velocidad = 5f;
-    public float FuerzaSalto = 7f;
-    public float LongitudRaycast = 0.1f;
-    public LayerMask capaSuelo;
-    private bool enSuelo;
-    private Rigidbody2D rb;
-    public Animator animator;
+    // Variables públicas configurables desde el inspector
+    public float velocidad = 5f;                 // Velocidad de movimiento horizontal
+    public float FuerzaSalto = 7f;               // Fuerza del salto
+    public float LongitudRaycast = 0.1f;         // Longitud del raycast hacia abajo para detectar el suelo
+    public LayerMask capaSuelo;                  // Capa que representa el suelo
+    private bool enSuelo;                        // ¿Está el jugador en el suelo?
+    private Rigidbody2D rb;                      // Componente de física 2D del jugador
+    public Animator animator;                    // Referencia al componente Animator
 
-    public AudioSource pasosAudio;
-    public AudioClip premioSound;
-    public AudioClip saltoSound;
-    public AudioClip muerteSound;
+    // Audio
+    public AudioSource pasosAudio;               // Audio que se reproduce al caminar
+    public AudioClip premioSound;                // Clip para cuando recoge un premio (no se usa aquí)
+    public AudioClip saltoSound;                 // Clip para el salto
+    public AudioClip muerteSound;                // Clip para la muerte
 
-    private AudioSource audioSource;
+    private AudioSource audioSource;             // Componente de AudioSource del jugador
 
     void Start()
     {
+        // Obtener referencias a los componentes necesarios al iniciar
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        //Horizontal
+        // Obtener el valor del eje horizontal (-1 a 1) y escalarlo por la velocidad y el tiempo
         float velocidadX = Input.GetAxis("Horizontal") * Time.deltaTime * velocidad;
-        //Vector 2
+
+        // Guardar la posición actual del jugador
         Vector2 posicion = transform.position;
 
-        //Funcion del animator par pasar de idle a run
+        // Cambiar animación entre idle y correr según el movimiento horizontal
         animator.SetFloat("Movimiento", velocidadX * velocidad);
 
-        //Para cambiar orientacion al correr
-        if (velocidadX < 0){
+        // Cambiar dirección visual del personaje (flip horizontal) según hacia dónde se mueve
+        if (velocidadX < 0)
+        {
             transform.localScale = new Vector2(-1, 1);
         }
-        if(velocidadX > 0){
+        if (velocidadX > 0)
+        {
             transform.localScale = new Vector2(1, 1);
         }
 
-        // Sonido de pasos
+        // Sonido de pasos: solo si se está moviendo horizontalmente y está en el suelo
         if (Input.GetAxis("Horizontal") != 0 && enSuelo)
         {
             if (!pasosAudio.isPlaying)
@@ -57,52 +62,52 @@ public class PlayerScrip : MonoBehaviour
             pasosAudio.Stop();
         }
 
-        //Movimiento
+        // Actualizar posición del jugador (movimiento horizontal)
         transform.position = new Vector2(velocidadX + posicion.x, posicion.y);
 
+        // Lanzar un raycast hacia abajo para detectar si está en el suelo
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, LongitudRaycast, capaSuelo);
         enSuelo = hit.collider != null;
 
-        
-        //Sentencia si el pj esta en el suelo, si apreta la tecla espacio el pj salta
-        if (enSuelo && Input.GetKeyDown(KeyCode.Space)) {
+        // Si está en el suelo y se presiona espacio, el jugador salta
+        if (enSuelo && Input.GetKeyDown(KeyCode.Space))
+        {
             rb.AddForce(new Vector2(0f, FuerzaSalto), ForceMode2D.Impulse);
-            audioSource.PlayOneShot(saltoSound);
+            audioSource.PlayOneShot(saltoSound); // Reproducir sonido de salto
         }
 
+        // Enviar al Animator si el jugador está en el suelo
         animator.SetBool("Ensuelo", enSuelo);
-
-
-
     }
 
+    // Dibuja en el editor una línea para visualizar el raycast hacia el suelo
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position,transform.position + Vector3.down * LongitudRaycast);
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * LongitudRaycast);
     }
 
-
-
-    // Detectar colisión con el objeto "vacío"
+    // Detectar colisión con un objeto tipo trigger
     [System.Obsolete]
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Si el jugador cae en una zona etiquetada como "CaidaMuerte"
         if (collision.CompareTag("CaidaMuerte"))
         {
-
-            // Detener completamente el movimiento
+            // Detener por completo el movimiento y congelarlo físicamente
             rb.velocity = Vector2.zero;
-            rb.bodyType = RigidbodyType2D.Static; // Lo congela físicamente
-            
+            rb.bodyType = RigidbodyType2D.Static;
 
+            // Mostrar mensaje, animación y sonido de muerte
             Debug.Log("¡Moriste!");
             animator.SetTrigger("CaidaMuerte");
             audioSource.PlayOneShot(muerteSound);
 
+            // Mostrar pantalla de Game Over (se asume que existe un objeto con este script)
             FindAnyObjectByType<GameOver>().MostrarGameOver();
-            this.enabled = false;//Para desactivar movimiento desde update.
 
+            // Desactivar este script para que deje de responder en Update
+            this.enabled = false;
         }
     }
 }

@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\dinocloudpv_final\\assets\\scripts\\premiosscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\premiosscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\dinocloudpv_final\\assets\\scripts\\final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\dinocloudpv_final\\assets\\scripts\\contador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\contador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\dinocloudpv_final\\assets\\scripts\\gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\dinocloudpv_final\\assets\\scripts\\musicafondo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\musicafondo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\dinocloudpv_final\\assets\\scripts\\pausarjuego.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pausarjuego.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\dinocloudpv_final\\assets\\scripts\\avanzarnivel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\avanzarnivel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\dinocloudpv_final\\assets\\scripts\\playerscrip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscrip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\dinocloudpv_final\\assets\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A9B5D3-A063-BD9B-DC47-8558F2AE8D62}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\Menu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu.cs",
+              "ToolTip": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\Menu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:06:45.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerScrip.cs",
+              "DocumentMoniker": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\PlayerScrip.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScrip.cs",
+              "ToolTip": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\PlayerScrip.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerScrip.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAqwHEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:41:58.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PremiosScript.cs",
+              "DocumentMoniker": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\PremiosScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PremiosScript.cs",
+              "ToolTip": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\PremiosScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PremiosScript.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwDUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:41:59.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AvanzarNivel.cs",
+              "DocumentMoniker": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\AvanzarNivel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AvanzarNivel.cs",
+              "ToolTip": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\AvanzarNivel.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AvanzarNivel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:41:39.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PausarJuego.cs",
+              "DocumentMoniker": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\PausarJuego.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PausarJuego.cs",
+              "ToolTip": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\PausarJuego.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PausarJuego.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:41:56.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MusicaFondo.cs",
+              "DocumentMoniker": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\MusicaFondo.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MusicaFondo.cs",
+              "ToolTip": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\MusicaFondo.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MusicaFondo.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwEkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:41:55.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameOver.cs",
+              "DocumentMoniker": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\GameOver.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameOver.cs",
+              "ToolTip": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\GameOver.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameOver.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:41:51.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Contador.cs",
+              "DocumentMoniker": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\Contador.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Contador.cs",
+              "ToolTip": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\Contador.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Contador.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAxwDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:41:42.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Final.cs",
+              "DocumentMoniker": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\Final.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Final.cs",
+              "ToolTip": "D:\\Unity\\Proyectos\\DinoCLoudPV_FINAL\\Assets\\Scripts\\Final.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Final.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:41:44.779Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
